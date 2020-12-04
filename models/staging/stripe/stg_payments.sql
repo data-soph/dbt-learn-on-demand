@@ -5,4 +5,4 @@ paymentmethod as payment_method,
 status,
 amount/100 as amount,
 created as created_at
-FROM "RAW"."STRIPE"."PAYMENT"
+FROM  {{ source('stripe','payments') }}
